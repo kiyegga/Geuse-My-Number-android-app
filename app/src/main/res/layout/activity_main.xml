@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Qeustions"
+        android:layout_margin="25dp"
+        app:fontFamily="sans-serif"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/success_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/success_text_view"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:textColor="@color/success_color"/>
+    <TextView
+        android:id="@+id/targetedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our number"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:textSize="25sp"
+        app:fontFamily="sans-serif"
+        android:layout_below="@id/success_text_view"/>
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="resetGame"
+        android:layout_margin="8dp"
+        android:background="@color/reset_button_color"
+        android:text="@string/reset_button_string"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_above="@+id/reset_button"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:weightSum="6">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:onClick="arrowDown"
+            android:src="@drawable/downward_arrow"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:onClick="successFunction"
+            android:layout_height="wrap_content"
+            android:src="@drawable/success"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:onClick="arrowUp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/upward_arrow"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
